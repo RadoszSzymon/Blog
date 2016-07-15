@@ -1,0 +1,148 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ */
+
+@import 'normalize';
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+
+*{
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+a, a:hover{
+	text-decoration: none;
+}
+
+html{
+    min-height:100%;/* make sure it is at least as tall as the viewport */
+    position:relative;
+}
+body{
+    height:100%; /* force the BODY element to match the height of the HTML element */
+		margin:0;
+}
+
+.jumbotron{
+	padding:0;
+	margin-bottom: 0;
+	background-color: #fff;
+
+	.page_wrapper{
+		display: flex;
+
+		.content{
+		padding:3em 0 3em 0;
+
+			textarea {
+			  resize: none;
+			}
+
+			.post_content{
+				.img, .title{
+					display: inline-block;
+				}
+
+				.title{
+					padding-left: 1em;
+					font-weight: 700;
+				}
+
+				.date{
+					padding-top: 1em;
+				}
+
+				.comment_box{
+					height: 7em;
+				}
+			}
+			.post_row{
+				padding: 2em 1em;
+				.image, .post_content{
+					display: inline;
+				}
+			}
+
+			.bucketlist{
+				h2{
+					font-size:3em;
+					font-weight: 700;
+					text-align: center;
+				}
+
+				h3{
+					font-weight: 700;
+					padding:1em;
+				}
+
+				ul
+				{
+				  list-style-type: none;
+
+					.done{
+						text-decoration: line-through;
+						font-weight: 400;
+					}
+				}
+			}
+		}/* END OF CONTENT */
+
+		.sidebar{
+			padding-top: 1em;
+			color:#fff;
+			padding: 2em 0 0 5em;
+			background-color: #4163C9;
+	    top:0;
+	    bottom:0;
+	    left:0;
+	    right:0;
+	    overflow:hidden;
+
+			a{
+				color: #fff;
+			}
+
+			a:hover{
+				color:#CFCFCF;
+			}
+
+			.page_title{
+				font-weight: 700;
+				font-size: 2.2em;
+				padding-bottom: 1em;
+			}
+
+			.sidebar_link{
+				font-weight: 400;
+				font-size: 1.6em;
+			}
+
+			.social_section{
+				padding-top: 1.9em;
+
+				.social_option{
+					font-size: 1.3em;
+
+					.icon_desc{
+						padding-left: 0.6em;
+					}
+				}
+			}
+
+			.admin_options{
+				padding-top: 1.9em;
+			}
+		}/* END OF SIDEBAR */
+	}/* END OF PAGE_WRAPPER */
+}/* END OF CONTAINER */
