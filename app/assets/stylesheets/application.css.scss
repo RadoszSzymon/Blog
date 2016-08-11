@@ -13,8 +13,7 @@
  */
 
 @import 'normalize';
-@import "bootstrap-sprockets";
-@import "bootstrap";
+@import "foundation_and_overrides";
 @import "font-awesome";
 
 *{
@@ -39,142 +38,167 @@ body{
 	width: 400px;
 }
 
-.jumbotron{
-	padding:0;
-	margin-bottom: 0;
-	background-color: #fff;
+.page_wrapper{
+	display: flex;
+	width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: initial;
 
-	.page_wrapper{
-		display: flex;
+	.content{
+	padding: 3em 4em;
 
-		.content{
-		padding:3em 0 3em 0;
+		textarea {
+		  resize: none;
+		}
 
-			textarea {
-			  resize: none;
+		.post_content{
+			.body{
+				white-space: pre-line;
+				padding: 0.5em 0 0.5em 1.5em;
+			}
+			
+			.img, .title{
+				display: inline-block;
 			}
 
-			.post_content{
-				.body{
-					white-space: pre-line;
-					padding: 0.5em 0 0.5em 1.5em;
-				}
-				
-				.img, .title{
-					display: inline-block;
-				}
-
-				.title{
-					padding-left: 1em;
-					font-weight: 700;
-				}
-
-				.date{
-					padding-top: 1em;
-				}
-
-				.comment_box{
-					height: 7em;
-				}
-				
-				#comments{
-					.comment_content{
-						.comment_name{
-							padding-left: 1em;
-							font-size: 1.7em;
-						}
-						.comment_body{
-							padding-left: 2em;
-						}
-					}
-				}
-			}
-			.post_row{
-				padding: 2em 1em;
-				.image, .post_content{
-					display: inline;
-				}
-			}
-
-			.bucketlist{
-				h2{
-					font-size:3em;
-					font-weight: 700;
-					text-align: center;
-				}
-
-				ul
-				{
-				  list-style-type: none;
-
-					.done{
-						text-decoration: line-through;
-						font-weight: 400;
-					}
-				}
-				
-				.bucket_title{
-					padding: .2em 0 3em 1em;
-					
-					h3{
-						font-weight: 700;
-					}
-					
-					.line{
-						width:100px;
-						border-top: 5px solid #4163C9;
-						padding-top: 0.3em;
-					}
-				}
-				
-			}
-		}/* END OF CONTENT */
-
-		.sidebar{
-			padding-top: 1em;
-			color:#fff;
-			padding: 2em 0 0 5em;
-			background-color: #4163C9;
-		    top:0;
-		    bottom:0;
-		    left:0;
-		    right:0;
-		    overflow:hidden;
-
-			a{
-				color: #fff;
-			}
-
-			a:hover{
-				color:#CFCFCF;
-			}
-
-			.page_title{
+			.title{
+				padding-left: 1em;
 				font-weight: 700;
-				font-size: 2.2em;
-				padding-bottom: 1em;
 			}
 
-			.sidebar_link{
-				font-weight: 400;
-				font-size: 1.6em;
+			.date{
+				padding-top: 1em;
+				font-weight:100;
 			}
 
-			.social_section{
-				padding-top: 1.9em;
-
-				.social_option{
-					font-size: 1.3em;
-
-					.icon_desc{
-						padding-left: 0.6em;
+			.comment_box{
+				height: 7em;
+			}
+			
+			#comments{
+				h2{
+					font-size: 1.2em;
+				}
+				
+				h3{
+					font-size: 1.35em;
+					padding-bottom: .6em;
+				}
+				
+				.button{
+					background: #4163C9;
+				}
+				
+				.button:hover{
+					background: #3354B8;
+				}
+				
+				.comment_content{
+					.comment_name{
+						padding-left: 1em;
+						font-size: 1.7em;
+					}
+					.comment_body{
+						padding-left: 2em;
 					}
 				}
 			}
-
-			.admin_options{
-				padding-top: 1.9em;
+		}
+		.post_row{
+			padding: 2em 1em;
+			.image, .post_content{
+				display: inline;
 			}
-		}/* END OF SIDEBAR */
-	}/* END OF PAGE_WRAPPER */
-}/* END OF CONTAINER */
+		}
+
+		.bucketlist{
+			h2{
+				font-size:3em;
+				font-weight: 700;
+				text-align: center;
+				padding-bottom: .8em;
+			}
+
+			ul
+			{
+			    list-style-type: none;
+			    padding-left: 7em;
+			    padding-bottom: 0.8em;
+			    
+			    p{
+			    	font-weight:100;
+			    	font-size: 1.2em;
+			    }
+
+				.done{
+					text-decoration: line-through;
+					font-weight: 400;
+				}
+			}
+			
+			.bucket_title{
+				padding: 1.2em 0 3em 4em;
+				
+				h3{
+					font-weight: 700;
+				}
+				
+				.line{
+					width:100px;
+					border-top: 5px solid #4163C9;
+					padding-top: 0.3em;
+				}
+			}
+			
+		}
+	}/* END OF CONTENT */
+
+	.sidebar{
+		padding-top: 1em;
+		color:#fff;
+		padding: 2em 0 0 5em;
+		background-color: #4163C9;
+	    top:0;
+	    bottom:0;
+	    left:0;
+	    right:0;
+	    overflow:hidden;
+
+		a{
+			color: #fff;
+		}
+
+		a:hover{
+			color:#CFCFCF;
+		}
+
+		.page_title{
+			font-weight: 700;
+			font-size: 2.2em;
+			padding-bottom: 1em;
+		}
+
+		.sidebar_link{
+			font-weight: 400;
+			font-size: 1.6em;
+		}
+
+		.social_section{
+			padding-top: 3em;
+
+			.social_option{
+				font-size: 1.3em;
+				padding-top: .4em;
+
+				.icon_desc{
+					padding-left: 0.6em;
+				}
+			}
+		}
+
+		.admin_options{
+			padding-top: 1.9em;
+		}
+	}/* END OF SIDEBAR */
+}/* END OF PAGE_WRAPPER */

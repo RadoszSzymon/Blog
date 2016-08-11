@@ -1,9 +1,9 @@
 <%= form_for([@post, @post.comments.build]) do |f| %>
 <div class="form-group">
-	<%= f.text_field :name, placeholder: "Your name", class: 'form-control' %>
+	<%= f.text_field :name, placeholder: "Twoja nazwa", class: 'form-control' %>
 </div>
 <div class="form-group">
-	<%= f.text_area :body, placeholder: "Your message", class: 'form-control comment_box' %>
+	<%= f.text_area :body, placeholder: "Twój komentarz", class: 'form-control comment_box' %>
 </div>
-	<%= f.submit "Add Comment", class: 'btn btn-default' %>
+	<%= f.submit "Dodaj komentarz", class: 'button' %>
 <% end %>

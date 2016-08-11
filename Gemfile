@@ -10,7 +10,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'devise', '~> 3.3.0'
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
-gem 'bootstrap-sass'
+gem 'foundation-rails', '5.4.3.1'
 gem "font-awesome-rails"
 
 group :development, :test do
