@@ -1,22 +1,25 @@
-<%= form_for @post do |f| %>
-	<% if @post.errors.any? %>
-		<div id="errors">
-			<h2><%= pluralize(@post.errors.count, "error") %> prevented this post from saving:</h2>
-			<ul>
-				<% @post.errors.full_messages.each do |msg| %>
-					<li><%= msg %></li>
-				<% end %>
-			</ul>
-		</div>
-	<% end %>
-  <%= f.label :image %><br>
-  <%= f.file_field :image %>
-	<br>
-	<%= f.label :title %><br>
-	<%= f.text_field :title %><br>
-	<br>
-	<%= f.label :body %><br>
-	<%= f.text_area :body, class: "body_form" %><br>
-	<br>
-	<%= f.submit %>
-<% end %>
+<div class="new_post_wrapper">
+	<%= form_for @post do |f| %>
+		<% if @post.errors.any? %>
+			<div id="errors">
+				<h2><%= pluralize(@post.errors.count, "error") %> prevented this post from saving:</h2>
+				<ul>
+					<% @post.errors.full_messages.each do |msg| %>
+						<li><%= msg %></li>
+					<% end %>
+				</ul>
+			</div>
+		<% end %>
+	  <%= f.label :image %><br>
+	  <%= f.file_field :image %>
+		<br>
+		<%= f.label :title %><br>
+		<%= f.text_field :title %><br>
+		<br>
+		<%= f.label :body %><br>
+		<%= f.text_area :body, class: "body_form" %><br>
+		<br>
+		<%= f.submit "Dodaj post", class: 'button' %>
+	<% end %>	
+</div>
+

@@ -38,21 +38,44 @@ body{
 	width: 400px;
 }
 
+.button{
+	background: #4163C9;
+}
+
+.button:hover{
+	background: #3354B8;
+}
+
 .page_wrapper{
 	display: flex;
 	width: 100%;
     margin-left: auto;
     margin-right: auto;
     max-width: initial;
-
+    
 	.content{
-	padding: 3em 4em;
-
+	padding: 0 0 3em 0;
+		
 		textarea {
 		  resize: none;
 		}
+		
+		#page_wrapper{
+			h1{
+		    		text-align: center;
+		    		padding-top:1em;
+		    	}
+		    	
+			.new_post_wrapper{
+		    	padding: 3em;
+		    }	
+		}
 
 		.post_content{
+			.without_image{
+				padding: 0 4em;
+			}
+			
 			.body{
 				white-space: pre-line;
 				padding: 0.5em 0 0.5em 1.5em;
@@ -84,14 +107,6 @@ body{
 				h3{
 					font-size: 1.35em;
 					padding-bottom: .6em;
-				}
-				
-				.button{
-					background: #4163C9;
-				}
-				
-				.button:hover{
-					background: #3354B8;
 				}
 				
 				.comment_content{
