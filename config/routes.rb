@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-get 'posts/main'
+  get 'posts/main'
 
   devise_for :users, controllers: { registrations: "registrations"}
   resources :posts do

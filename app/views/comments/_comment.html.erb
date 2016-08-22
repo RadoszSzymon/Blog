@@ -1,6 +1,6 @@
 <div class="comment clearfix">
 	<div class="comment_content">
-			<p class="comment_name"><strong><%= comment.name %></strong> napisał/ła: </p>
+			<p class="comment_name"><span class="comment_author"><%= comment.name %></span> wrote: </p>
 			<p class="comment_body"><%= comment.body %></p>
 		<hr>
 	</div>
@@ -9,6 +9,6 @@
 	<p><%= link_to 'Delete', [comment.post, comment],
 								  method: :delete,
 								  class: "button",
-								 	data: { confirm: 'Jesteś pewien?' } %></p>
+								 	data: { confirm: 'Are you sure?' } %></p>
  	<% end %>
 </div>
