@@ -18,7 +18,7 @@
 
 $light_green: #85DB8F;
 $dark_green: #42A557;
-$platinum: #DEE4E5;
+$platinum: #F3F3F3;
 $black: #191C1A;
 $white: #ffffff;
 
@@ -58,6 +58,7 @@ body {
         .container-fluid{
             background-color: $dark_green;
             padding: 0 4em;
+            border-color: 1px solid $dark_green;
             a{
                color: $white; 
             }
@@ -66,6 +67,9 @@ body {
             }
             .navbar-header{
                 padding-left: 2em;
+                .navbar-brand{
+                    font-weight: 700;
+                }
             }
         }
     }
@@ -76,11 +80,13 @@ body {
         width:100%;
         .content{
             background-color: $platinum;
+            box-shadow: inset -10px 0 5px -5px hsla(0,0%,0%,.20);    
             .post_row{
                 padding: 2em 9em 0 9em;
                 .post_index{
-                    margin-bottom:1em;
+                    padding-bottom:1em;
                     background:#fff;
+                    box-shadow: 0 4px 2px -2px #CDCDCD;
                     img{
                         width: 100%;
                         height: 30%;
@@ -97,8 +103,7 @@ body {
             }
             .post_content{
                 padding: 0 9em 4em 9em;
-                background-color: $white;
-                border-right: 1em solid $platinum;
+                background-color: $platinum;
                 padding-top: 2em;
                 h1{
                     font-weight: 700;
@@ -140,8 +145,16 @@ body {
                 }
             }
             .bucketlist{
-                background-color: $white;
-                padding: 0 9em;
+                background-color: $platinum;
+                padding: 0 9em 3em 9em;
+                hr{
+                    display: block;
+                    height: 1px;
+                    border: 0;
+                    border-top: 2px solid $white;
+                    margin: 1em 0;
+                    padding: 0; 
+                }
                 h2{
                     margin:0;
                     padding: 1em;
@@ -150,11 +163,21 @@ body {
                     text-align:center;
                 }
                 h3{
-                    font-size:2em;
+                    padding: 1em 0;
+                    color: $light_green;
+                    font-size: 2.5em;
                     font-weight:700;
                 }
                 ul{
                     list-style-type: none;
+                    p{
+                        font-size: 1.7em;
+                    }
+                    .done{
+                         text-decoration: line-through;
+                         color: $dark_green;
+                         font-weight:700;
+                    }
                 }
             }
         }/* end of content */
