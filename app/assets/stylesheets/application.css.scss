@@ -16,10 +16,8 @@
 @import "bootstrap";
 @import "font-awesome";
 
-$light_green: #85DB8F;
-$dark_green: #42A557;
-$platinum: #F3F3F3;
-$black: #191C1A;
+$gray: #565656;
+$black: #0E0E0E;
 $white: #ffffff;
 
 *{
@@ -30,175 +28,53 @@ a, a:hover{
 	text-decoration: none;
 }
 
-body{
-	width: 100%;
-}
-
-html, body {
-  height: 100%;
-  background-color: $white;
-}
-body {
-  display: flex;
-}
-
-.content, .sidebar {
-  flex: 1;
-}
-
-.jumbotron{
-    padding:0;
-    width:100%;
-    background-color: $white;
-    
-    .page_wrapper{
-        .navbar-default{
-            margin:0;
-        }
-        .container-fluid{
-            background-color: $dark_green;
-            padding: 0 4em;
-            border-color: 1px solid $dark_green;
-            a{
-               color: $white; 
-            }
-            a:hover{
-                color: $platinum;
-            }
-            .navbar-header{
-                padding-left: 2em;
-                .navbar-brand{
-                    font-weight: 700;
-                }
-            }
-        }
+a{
+    color: $white;
+    &:hover{
+        color: $gray;
     }
-    
-    .container{
-        margin:0;
-        padding:0;
-        width:100%;
-        .content{
-            background-color: $platinum;
-            box-shadow: inset -10px 0 5px -5px hsla(0,0%,0%,.20);    
-            .post_row{
-                padding: 2em 9em 0 9em;
-                .post_index{
-                    padding-bottom:1em;
-                    background:#fff;
-                    box-shadow: 0 4px 2px -2px #CDCDCD;
-                    img{
-                        width: 100%;
-                        height: 30%;
-                    }
-                    img:hover{
-                        opacity: .9;
-                    }
-                    h2{
-                        text-align:center;
-                        margin:0;
-                        padding:1em 0;
-                    }
-                }                
+}
+
+.container{
+    margin:0;
+    width: 100%;
+    .jumbotron{
+        padding: 0;
+        .menu{
+            padding: 1.5em 0;
+            background-color: $black;
+            display:flex;
+            align-items: center; /* Vertical center alignment */
+            justify-content: center; /* Horizontal center alignment */
+            .brand{
+                font-size:2em;
+                font-weight:900;
             }
-            .post_content{
-                padding: 0 9em 4em 9em;
-                background-color: $platinum;
-                padding-top: 2em;
-                h1{
-                    font-weight: 700;
-                    padding: .3em 0;
-                    color: $dark_green;
-                }
-                .without_image{
-                    .body{
-                        font-weight: 300;
-                    }
-                    #comments{
-                        .comment_name{
-                            font-size: 2em;
-                        }
-                        .btn-default{
-                            padding: .5em 2.5em;
-                            color: $black;
-                            border-radius: 50px;
-                            background-color: $white;
-                            font-weight: 700;
-                            font-size: 1.3em;
-                            border: 1px solid $light_green;
-                        }
-                        .btn-default:hover{
-                            color: $white;
-                            background-color: $light_green;
-                        }
-                        .comment_author{
-                           font-weight: 700;
-                           color: $light_green;
-                        }
-                        .comment_body{
-                           font-size: 1em; 
-                        }
-                        textarea {
-                            resize: none;
-                        } 
-                    }
-                }
-            }
-            .bucketlist{
-                background-color: $platinum;
-                padding: 0 9em 3em 9em;
-                hr{
-                    display: block;
-                    height: 1px;
-                    border: 0;
-                    border-top: 2px solid $white;
-                    margin: 1em 0;
-                    padding: 0; 
-                }
-                h2{
-                    margin:0;
-                    padding: 1em;
-                    font-weight: 700;
-                    font-size: 3em;
-                    text-align:center;
-                }
-                h3{
-                    padding: 1em 0;
-                    color: $light_green;
-                    font-size: 2.5em;
-                    font-weight:700;
-                }
-                ul{
-                    list-style-type: none;
-                    p{
-                        font-size: 1.7em;
-                    }
-                    .done{
-                         text-decoration: line-through;
-                         color: $dark_green;
-                         font-weight:700;
-                    }
-                }
-            }
-        }/* end of content */
-        .sidebar{
-            background-color: $white;
-            height: 100%;
-            padding: 0 2.8em;
-            img{
-                padding-top: 2em;
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            h3{
-                text-align: center;
-                font-weight: 700;
-            }
+        }
+        
+        .footer{
+            background-color: $black;
+            color: $gray;
+            display:flex;
+            align-items: center; /* Vertical center alignment */
+            justify-content: center; /* Horizontal center alignment */
+            
             h4{
-                text-align: center;
+                font-size: 2em;
+                font-weight: 900;
+                color: $white;
             }
-        }/* end of sidebar */
+            .social{
+                padding: 1em;
+                font-size: 2em;
+                transition: all .2s ease-in-out;
+                font-weight: 300;
+            }
+            .social:hover{
+                transform: scale(1.2);
+            }
+        }
     }
 }
+
 
