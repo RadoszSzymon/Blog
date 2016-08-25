@@ -3,5 +3,6 @@ class PagesController < ApplicationController
 	end
 	
 	def main
+		@posts = Post.all.order('created_at DESC').limit(3)
 	end
 end
