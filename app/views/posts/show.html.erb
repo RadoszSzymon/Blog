@@ -1,24 +1,28 @@
-<div class="row post_content">
-	<div class="col-md-8">
+<div class="row post">
+	<div class="col-md-8 post_content">
 		<h1><%= @post.title %></h1>
 
-		<p class="date">
-			<%= fa_icon "calendar" %> <%= @post.created_at.strftime("%d.%m.%Y") %>
-			<h4>Amount od comments: <%= @post.comments.count %></h2>
+		<p class="info">
+			<span class="date">
+				<%= fa_icon "calendar" %> <%= @post.created_at.strftime("%d.%m.%Y") %>
+			</span>
+			<span class="comment_info">
+				<%= fa_icon "comments-o" %> <%= @post.comments.count %>
+			</span>
 			<% if user_signed_in? %>
 			| <%= link_to 'Edit', edit_post_path(@post) %> |
 			  <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %>
 		  <% end %>
-
-		  
 		</p>
 
-		<%= image_tag @post.image.url(:medium) %>
+		<hr>
+
+		<%= image_tag @post.image.url(:medium), align:"left" %>
 		
 		
 		<p class="body"><%= @post.body %></p>
 
-		<div id="comments">
+		<div class="comments">
 			<hr>
 			<%= render @post.comments %>
 
@@ -27,8 +31,8 @@
 		</div>
 	</div>
 
-	<div class="col-md-4">
-		<h3>Other posts</h3>
+	<div class="col-md-4 post_sidebar">
+		<h2>Other posts</h2>
 		
 		<div class="first_random">
 			<% if @random_post %>

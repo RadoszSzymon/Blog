@@ -37,6 +37,12 @@ a{
     }
 }
 
+hr{ 
+    background-color: $light_black; 
+    height: 1px; 
+    border: 0; 
+}
+
 .container, .jumbotron{
     background-color: $white;
 }
@@ -250,6 +256,52 @@ a{
                             text-decoration: line-through;
                             color: $blue;
                         }
+                    }
+                }
+            }
+        }
+
+        .post{
+            padding:4em 6em;
+
+            .post_content{
+                h1{
+                    font-weight: 900;
+                    font-size: 5em;
+                }
+                img{
+                    padding:1.9em 2em 2em 0;
+                }
+                
+                .info{
+                    padding-bottom: 1em;
+                    margin:0;
+                    .date{
+                        padding-right: 1.2em;
+                    }
+                }
+
+                .body{
+                    padding: 1em 0 1em 0;
+                }
+
+                .comments{
+                    h3{
+                        padding-top: 1em;
+                    }
+                }
+            }
+
+            .post_sidebar{
+                text-align: center;
+                h2{
+                    font-weight: 900;
+                    padding-bottom:2em;
+                }
+                .first_random, .second_random, .third_random{
+                    a{
+                        font-weight: 900;
+                        font-size: 1.5em;
                     }
                 }
             }
