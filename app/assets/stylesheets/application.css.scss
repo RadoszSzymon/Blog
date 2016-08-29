@@ -31,7 +31,7 @@ a, a:hover{
 }
 
 a{
-    color: $white;
+    color: $blue;
     &:hover{
         color: $blue;
     }
@@ -57,6 +57,12 @@ a{
             .brand{
                 font-size:2em;
                 font-weight:900;
+            }
+            a{
+                color: $white;
+            }
+            a:hover{
+                color: $blue;
             }
         }
         

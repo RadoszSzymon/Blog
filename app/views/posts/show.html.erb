@@ -1,8 +1,8 @@
-<div class="post_content">
-  <%= image_tag @post.image.url(:medium) %>
-	<h1><%= @post.title %></h1>
-	
-	<div class="without_image">
+<div class="row post_content">
+	<div class="col-md-8">
+		<%= image_tag @post.image.url(:medium) %>
+		<h1><%= @post.title %></h1>
+
 		<p class="date">
 			<%= fa_icon "calendar" %> <%= @post.created_at.strftime("%d.%m.%Y") %> 
 			<% if user_signed_in? %>
@@ -11,15 +11,38 @@
 		  <% end %>
 		</p>
 		<p class="body"><%= @post.body %></p>
-	
+
 		<div id="comments">
 			<h4>Amount od comments: <%= @post.comments.count %></h2>
 			<hr>
 			<%= render @post.comments %>
-	
+
 			<h3>Add comment:</h3>
 			<%= render "comments/form" %>
 		</div>
 	</div>
+
+	<div class="col-md-4">
+		<h3>Other posts</h3>
+		
+		<div class="first_random">
+			<% if @random_post %>
+				<%= link_to @random_post.title, post_path(@random_post) %>
+			<% end %>
+		</div>
+
+		<div class="second_random">
+			<% if @random_post2 %>
+				<%= link_to @random_post.title, post_path(@random_post) %>
+			<% end %>
+		</div>
+
+		<div class="third_random">
+			<% if @random_post3 %>
+				<%= link_to @random_post.title, post_path(@random_post) %>
+			<% end %>
+		</div>
+	</div>
+  
 
 </div>

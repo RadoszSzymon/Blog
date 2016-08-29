@@ -11,6 +11,9 @@ class PostsController < ApplicationController
 
 	def show
 		@post = Post.find(params[:id])
+		@random_post = Post.where.not(id: @post).order("RANDOM()").first
+    	@random_post2 = Post.where.not(id: @post).order("RANDOM()").second
+		@random_post3 = Post.where.not(id: @post).order("RANDOM()").third
 	end
 
 	def create
