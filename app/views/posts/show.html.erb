@@ -1,19 +1,24 @@
 <div class="row post_content">
 	<div class="col-md-8">
-		<%= image_tag @post.image.url(:medium) %>
 		<h1><%= @post.title %></h1>
 
 		<p class="date">
-			<%= fa_icon "calendar" %> <%= @post.created_at.strftime("%d.%m.%Y") %> 
+			<%= fa_icon "calendar" %> <%= @post.created_at.strftime("%d.%m.%Y") %>
+			<h4>Amount od comments: <%= @post.comments.count %></h2>
 			<% if user_signed_in? %>
 			| <%= link_to 'Edit', edit_post_path(@post) %> |
 			  <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %>
 		  <% end %>
+
+		  
 		</p>
+
+		<%= image_tag @post.image.url(:medium) %>
+		
+		
 		<p class="body"><%= @post.body %></p>
 
 		<div id="comments">
-			<h4>Amount od comments: <%= @post.comments.count %></h2>
 			<hr>
 			<%= render @post.comments %>
 
