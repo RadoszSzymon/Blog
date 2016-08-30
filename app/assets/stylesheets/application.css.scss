@@ -17,6 +17,7 @@
 @import "font-awesome";
 
 $gray: #565656;
+$light_gray: #adadad;
 $black: #0E0E0E;
 $white: #ffffff;
 $light_black: #191919;
@@ -38,7 +39,7 @@ a{
 }
 
 hr{ 
-    background-color: $light_black; 
+    background-color: $light_gray; 
     height: 1px; 
     border: 0; 
 }
@@ -289,6 +290,15 @@ hr{
                     h3{
                         padding-top: 1em;
                     }
+
+                    .comment_author{
+                        color: $blue;
+                        font-weight:900;
+                    }
+
+                    .comment_body{
+                        padding-left: 1em;
+                    }
                 }
             }
 
@@ -332,6 +342,25 @@ hr{
                 color: $blue;
                 transform: scale(1.2);
             }
+        }
+
+        .session{
+            h2{
+                    text-align: center;
+                    font-size: 4em;
+                    font-weight: 900;
+                    padding: 2em 0;
+                    background-color: $light_black;
+                    color: $white;
+                    margin:0;
+                    -webkit-box-shadow: inset 0px -20px 6px 0px rgba(0,0,0,0.58);
+                    -moz-box-shadow: inset 0px -20px 6px 0px rgba(0,0,0,0.58);
+                    box-shadow: inset 0px -20px 6px 0px rgba(0,0,0,0.58);
+                } 
+
+            .new, .password{
+               padding: 4em 0; 
+            }  
         }
     }
 }
