@@ -1,16 +1,16 @@
 <div class="row banner">
-    <div class="col-md-12">
+    <div class="col-md-12 col-sm-12 col-xs-12">
         <h1 class="animated infinite bounce">SimpleDreams</h1>
         <h2>Simple rules to win life game.</h2>
         <div class="scroll">
              <a href="#about"><%= fa_icon "angle-double-down" %></a>
         </div>
-        
+
     </div>
 </div>
 
 <div class="row about" id="about">
-    <div class="col-md-5">
+    <div class="col-md-5 col-sm-12">
         <%= image_tag("me1.jpg", :alt => "me") %>
     </div>
     <div class="col-md-7">
@@ -22,7 +22,7 @@
 <div class="row recent">
     <h2>Recent blog posts</h1>
     <% @posts.each do |post| %>
-    	<div class="col-md-4">
+    	<div class="col-md-4 col-sm-4 col-xs-12">
     		<div class="post_index">
     			<%= link_to (image_tag post.image.url(:medium)), post %>
     			<h2><%= link_to post.title, post %></h2>
