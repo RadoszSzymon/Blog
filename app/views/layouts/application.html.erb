@@ -3,13 +3,23 @@
   <head>
     <title>SimpleDreams</title>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
     <link href="https://fonts.googleapis.com/css?family=Raleway:900" rel="stylesheet">
     <%= csrf_meta_tags %>
   </head>
 
   <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v2.7&appId=512793028918720";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
     <div class="container">
       <div class="jumbotron">
         <div class="row menu">
@@ -18,9 +28,9 @@
           <div class="col-md-2"><h4><%= link_to "Blog", posts_path %></h3></div>
           <div class="col-md-2"><h4><%= link_to "Bucket List", about_path %></h3></div>
         </div>
-            
+
         <%= yield %>
-        
+
         <div class="row footer">
           <div class="col-md-4 col-md-offset-2 brand">
             <h4>SimpleDreams</h2>
@@ -30,29 +40,29 @@
           <div class="col-md-1"><a href="#"><%= fa_icon "github", class:"social github" %></a></div>
           <div class="col-md-1"><a href="#"><%= fa_icon "twitter", class:"social twitter" %></a></div>
         </div>
-        
+
       </div>
     </div>
-    
+
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
     <script>
-      //scrool between sections
-      $(document).ready(function() {
-        $("a").on('click', function(event) {
-          if (this.hash !== "") {
-            event.preventDefault();
-            
-            var hash = this.hash;
-      
-            $('html, body').animate({
-              scrollTop: $(hash).offset().top
-            }, 1000, function(){
-              window.location.hash = hash;
-            });
-          } 
-        });
-    });
-</script>
-      
+        //scrool between sections
+        $(document).ready(function() {
+          $("a").on('click', function(event) {
+            if (this.hash !== "") {
+              event.preventDefault();
+
+              var hash = this.hash;
+
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 1000, function(){
+                window.location.hash = hash;
+              });
+            }
+          });
+      });
+    </script>
+
   </body>
 </html>

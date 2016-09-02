@@ -18,8 +18,7 @@
 		<hr>
 
 		<%= image_tag @post.image.url(:medium), align:"left" %>
-		
-		
+
 		<p class="body"><%= @post.body %></p>
 
 		<div class="comments">
@@ -28,12 +27,14 @@
 
 			<h3>Add comment:</h3>
 			<%= render "comments/form" %>
+
+			<%= content_tag :div, '', :class => "fb-comments", "data-href" => request.original_url, "data-numposts" => "5", "data-colorscheme" => "light" %>
 		</div>
 	</div>
 
 	<div class="col-md-4 post_sidebar">
 		<h2>Other posts</h2>
-		
+
 		<div class="first_random">
 			<% if @random_post %>
 				<%= link_to @random_post.title, post_path(@random_post) %>
@@ -52,6 +53,6 @@
 			<% end %>
 		</div>
 	</div>
-  
+
 
 </div>
