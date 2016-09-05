@@ -9,4 +9,8 @@ Rails.application.routes.draw do
 
   get '/about', to: 'pages#about'
   get '/main', to: 'pages#main'
+
+  #mail
+  match '/contacts',     to: 'contacts#new',             via: 'get'
+  resources "contacts", only: [:new, :create]
 end

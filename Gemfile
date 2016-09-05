@@ -12,6 +12,10 @@ gem 'bootstrap-sass'
 gem 'sass-rails', '>= 3.2'
 gem 'therubyracer', platforms: :ruby
 gem "font-awesome-rails"
+gem 'simple_form', '~> 3.2', '>= 3.2.1'
+
+#mail
+gem 'mail_form'
 
 group :development, :test do
 	gem 'sqlite3'
