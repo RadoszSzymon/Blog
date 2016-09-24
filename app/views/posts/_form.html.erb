@@ -10,16 +10,18 @@
 				</ul>
 			</div>
 		<% end %>
-	  <%= f.label :image %><br>
-	  <%= f.file_field :image %>
-		<br>
-		<%= f.label :title %><br>
-		<%= f.text_field :title %><br>
-		<br>
-		<%= f.label :body %><br>
-		<%= f.text_area :body, class: "body_form" %><br>
-		<br>
+		<div class="form-group">
+		  <%= f.label :image %><br>
+		  <%= f.file_field :image, class:"form-control" %>
+		</div>
+		<div class="form-group">
+			<%= f.label :title %><br>
+			<%= f.text_field :title, class:"form-control"  %><br>
+		</div>
+		<div class="form-group">
+			<%= f.label :body %><br>
+			<%= f.bootsy_area :body, class: "body_form form-control", editor_options: { image: false }  %><br>
+		</div>
 		<%= f.submit "Dodaj post", class: 'btn btn-default' %>
-	<% end %>	
+	<% end %>
 </div>
-

@@ -13,6 +13,7 @@ gem 'sass-rails', '>= 3.2'
 gem 'therubyracer', platforms: :ruby
 gem "font-awesome-rails"
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
+gem 'bootsy'
 
 #mail
 gem 'mail_form'

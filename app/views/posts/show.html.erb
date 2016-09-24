@@ -19,7 +19,7 @@
 
 		<%= image_tag @post.image.url(:medium), align:"left" %>
 
-		<p class="body"><%= @post.body %></p>
+		<p class="body"><%= raw @post.body %></p>
 
 		<div class="comments">
 			<hr>
@@ -27,8 +27,6 @@
 
 			<h3>Add comment:</h3>
 			<%= render "comments/form" %>
-
-			<%= content_tag :div, '', :class => "fb-comments", "data-href" => request.original_url, "data-numposts" => "5", "data-colorscheme" => "light" %>
 		</div>
 	</div>
 
