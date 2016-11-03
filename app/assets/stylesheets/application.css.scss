@@ -373,8 +373,29 @@ hr{
 
             .new, .password{
                padding: 4em 0;
+               text-align:center;
             }
         }/* session */
+        
+        .page_wrapper{
+            h2{
+                text-align: center;
+                    font-size: 4em;
+                    font-weight: 900;
+                    padding: 2em 0;
+                    background-color: $light_black;
+                    color: $white;
+                    margin:0;
+                    -webkit-box-shadow: inset 0px -20px 6px 0px rgba(0,0,0,0.58);
+                    -moz-box-shadow: inset 0px -20px 6px 0px rgba(0,0,0,0.58);
+                    box-shadow: inset 0px -20px 6px 0px rgba(0,0,0,0.58);
+            }
+            
+            .new_post{
+               padding: 4em 0;
+               text-align:center;
+            }
+        }
 
         .message{
           padding-bottom: 4em;
@@ -426,3 +447,18 @@ hr{
         }/*after send message*/
     }/* jumbotron */
 }/* container */
+
+@media screen and (max-width: 1030px) {
+ .container{
+     .jumbotron{
+         .about{
+             .about_image{
+                 display:none;
+             }
+             .about_text{
+                 width:100%;
+             }
+         }
+     }
+ }   
+}
