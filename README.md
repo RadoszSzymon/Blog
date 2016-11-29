@@ -6,8 +6,5 @@ Blog website build in Ruby On Rails
 * Bootstrap Sass
 * Paperclip
 
-## Blog run on Heroku
-https://rocky-forest-49664.herokuapp.com/
-
 ## Author
 * Radosz Szymon
