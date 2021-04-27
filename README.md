@@ -5,6 +5,3 @@ Blog website build in Ruby On Rails
 * Ruby On Rails 4.1.5
 * Bootstrap Sass
 * Paperclip
-
-## Author
-* Radosz Szymon
